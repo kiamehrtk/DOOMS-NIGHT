@@ -591,11 +591,11 @@
     .about     { padding: 28px 18px 72px; }
     .site-footer { padding: 48px 18px 36px; }
 
-    /* Keep the timer on one line by shrinking the floor sizes */
-    .digits { gap: clamp(6px, 3vw, 18px); }
-    .digit-num { font-size: clamp(2rem, 13vw, 3.2rem); }
-    .colon     { font-size: clamp(1.5rem, 10vw, 2.6rem); }
-    .digit-label { font-size: 10px; letter-spacing: 0.22em; margin-top: 10px; }
+    /* Keep the timer on one line: narrower font + smaller, tighter sizing */
+    .digits { gap: clamp(4px, 2vw, 14px); }
+    .digit-num { font-family: 'Tactic Sans', sans-serif; font-size: clamp(1.8rem, 10vw, 2.8rem); }
+    .colon     { font-family: 'Tactic Sans', sans-serif; font-size: clamp(1.4rem, 7vw, 2.2rem); }
+    .digit-label { font-size: 10px; letter-spacing: 0.18em; margin-top: 10px; }
 
     .tickets-header { margin-bottom: 44px; }
     .ticket-card { padding: 36px 26px 34px; }
@@ -609,8 +609,9 @@
   /* Very small phones */
   @media (max-width: 380px) {
     .site-header .wordmark { font-size: 12px; letter-spacing: 0.18em; }
-    .digit-num { font-size: clamp(1.7rem, 12vw, 2.6rem); }
-    .digit-label { font-size: 9px; letter-spacing: 0.16em; }
+    .digit-num { font-size: clamp(1.5rem, 9vw, 2.2rem); }
+    .colon     { font-size: clamp(1.2rem, 6vw, 1.8rem); }
+    .digit-label { font-size: 9px; letter-spacing: 0.14em; }
   }
 
   /* Hero: on tablet & phone, show the FULL poster (no crop) with the
