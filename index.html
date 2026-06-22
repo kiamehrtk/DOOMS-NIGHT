@@ -562,6 +562,56 @@
     text-transform: uppercase;
     color: rgba(138,106,46,0.7);
   }
+
+  /* ════════════ RESPONSIVE ════════════ */
+
+  /* Tablets & small laptops */
+  @media (max-width: 900px) {
+    .site-header { padding: 16px 24px; }
+    .hero-content { padding: 0 24px 56px; }
+    .countdown { padding: 96px 24px 104px; }
+    .tickets   { padding: 36px 24px 104px; }
+    .about     { padding: 36px 24px 96px; }
+    .site-footer { padding: 60px 24px 40px; }
+    .digits { gap: clamp(10px, 4vw, 40px); }
+  }
+
+  /* Phones */
+  @media (max-width: 600px) {
+    .site-header { padding: 14px 18px; }
+    .site-header .wordmark { font-size: 14px; letter-spacing: 0.26em; }
+    .header-cta { font-size: 11px; padding: 8px 14px; letter-spacing: 0.18em; }
+
+    .hero-content { padding: 0 18px 44px; }
+    .hero-btn { padding: 15px 32px; font-size: 14px; letter-spacing: 0.2em; }
+    .hero-cta-row { gap: 12px; }
+
+    .countdown { padding: 72px 18px 84px; }
+    .tickets   { padding: 28px 18px 84px; }
+    .about     { padding: 28px 18px 72px; }
+    .site-footer { padding: 48px 18px 36px; }
+
+    /* Keep the timer on one line by shrinking the floor sizes */
+    .digits { gap: clamp(6px, 3vw, 18px); }
+    .digit-num { font-size: clamp(2rem, 13vw, 3.2rem); }
+    .colon     { font-size: clamp(1.5rem, 10vw, 2.6rem); }
+    .digit-label { font-size: 10px; letter-spacing: 0.22em; margin-top: 10px; }
+
+    .tickets-header { margin-bottom: 44px; }
+    .ticket-card { padding: 36px 26px 34px; }
+
+    /* Stack the footer rows cleanly */
+    .footer-top    { flex-direction: column; align-items: flex-start; gap: 26px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .footer-nav    { gap: 20px; }
+  }
+
+  /* Very small phones */
+  @media (max-width: 380px) {
+    .site-header .wordmark { font-size: 12px; letter-spacing: 0.18em; }
+    .digit-num { font-size: clamp(1.7rem, 12vw, 2.6rem); }
+    .digit-label { font-size: 9px; letter-spacing: 0.16em; }
+  }
 </style>
 </head>
 <body>
