@@ -612,6 +612,39 @@
     .digit-num { font-size: clamp(1.7rem, 12vw, 2.6rem); }
     .digit-label { font-size: 9px; letter-spacing: 0.16em; }
   }
+
+  /* Hero: on tablet & phone, show the FULL poster (no crop) with the
+     CTA flowing below it instead of a cropped full-screen background. */
+  @media (max-width: 900px) {
+    .hero {
+      min-height: auto;
+      display: block;
+    }
+    .hero-bg {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #0A0809;
+      background-size: contain;
+      background-position: center;
+    }
+    /* These overlays were sized for a full-screen crop; hide them so the
+       contained poster stays clean and readable. */
+    .hero-grad-bottom,
+    .hero-grad-color,
+    .hero-vignette,
+    .hero-scroll {
+      display: none;
+    }
+    .hero-content {
+      position: relative;
+      padding: 30px 24px 44px;
+    }
+  }
+  @media (max-width: 600px) {
+    .hero-content { padding: 26px 18px 40px; }
+  }
 </style>
 </head>
 <body>
